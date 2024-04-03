@@ -1,11 +1,12 @@
 package baitap.presentation;
 
+import baitap.business.design.IProduct;
 import baitap.business.implementation.ProductManagement;
 import baitap.config.InputMethods;
 
 public class ProductMenu
 {
-    private static final ProductManagement productManagement = new ProductManagement();
+    private static final IProduct productManagement = new ProductManagement();
 
     public void displayProductMenu()
     {

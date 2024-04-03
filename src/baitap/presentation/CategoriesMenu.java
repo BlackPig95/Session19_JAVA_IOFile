@@ -1,11 +1,12 @@
 package baitap.presentation;
 
+import baitap.business.design.ICategories;
 import baitap.business.implementation.CategoriesManagement;
 import baitap.config.InputMethods;
 
 public class CategoriesMenu
 {
-    private static final CategoriesManagement categoriesManagement = new CategoriesManagement();
+    private static final ICategories categoriesManagement = new CategoriesManagement();
 
     public void displayCategoriesMenu()
     {
