@@ -1,14 +1,12 @@
 package baitap.business.implementation;
 
 import baitap.business.design.IProduct;
-import baitap.business.entity.Categories;
 import baitap.business.entity.Product;
 import baitap.config.InputMethods;
 import baitap.config.ReadAndWriteFile;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import static baitap.business.implementation.CategoriesManagement.categoriesList;
@@ -43,7 +41,6 @@ public class ProductManagement implements IProduct
     @Override
     public void displayAllElements()
     {
-
         if (productList.isEmpty())
         {
             System.out.println("No product currently available");
