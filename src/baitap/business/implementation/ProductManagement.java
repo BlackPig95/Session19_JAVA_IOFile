@@ -149,7 +149,6 @@ public class ProductManagement implements IProduct
     @Override
     public int getIndexById()
     {
-        categoriesList = ReadAndWriteFile.readObjectStream("src/baitap/business/database/categories.txt");
         if (productList.isEmpty())
         {
             System.out.println("No product currently available");
@@ -170,7 +169,6 @@ public class ProductManagement implements IProduct
     @Override
     public void sortByPrice()
     {
-        productList = ReadAndWriteFile.readObjectStream(productFile);
         while (true)
         {
             System.out.println("Enter 1 to sort ascending, 2 to sort descending, 0 to return");
@@ -197,7 +195,6 @@ public class ProductManagement implements IProduct
     @Override
     public void searchByName()
     {
-        productList = ReadAndWriteFile.readObjectStream(productFile);
         System.out.println("Enter product name to search");
         String searchName = InputMethods.nextLine();
         if (productList.stream().noneMatch(p -> p.getProductName().contains(searchName)))
@@ -212,7 +209,6 @@ public class ProductManagement implements IProduct
     @Override
     public void searchInPriceRange()
     {
-        productList = ReadAndWriteFile.readObjectStream(productFile);
         System.out.println("From which price you want to search?");
         float fromPrice = InputMethods.nextFloat();
         System.out.println("To which price you want to search?");

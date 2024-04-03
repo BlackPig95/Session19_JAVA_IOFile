@@ -14,6 +14,10 @@ public class CategoriesManagement implements ICategories
 {
     static List<Categories> categoriesList = new ArrayList<>();
 
+    { //Retrieve file data
+        categoriesList = ReadAndWriteFile.readObjectStream("src/baitap/business/database/categories.txt");
+    }
+
     @Override
     public void addElement()
     {
@@ -33,7 +37,6 @@ public class CategoriesManagement implements ICategories
     @Override
     public void displayAllElements()
     {
-        categoriesList = ReadAndWriteFile.readObjectStream("src/baitap/business/database/categories.txt");
         if (categoriesList.isEmpty())
         {
             System.out.println("No categories currently available");
